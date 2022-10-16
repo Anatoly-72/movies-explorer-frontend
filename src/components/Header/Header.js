@@ -1,11 +1,12 @@
 import './Header.css';
-// import Logo from '../Logo/logo';
-// import Navigation from '../Navigation/Navigation';
+import Logo from '../Logo/Logo';
+import Navigation from '../Navigation/Navigation';
 
-const Header = () => {
+function Header() {
    return (
       <header className="header">
-         test
+         <Logo />
+         <Navigation />
       </header>
    )
 }
