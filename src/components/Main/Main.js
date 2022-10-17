@@ -4,7 +4,7 @@ import Promo from "../Promo/Promo";
 // import AboutMe from "./AboutMe/AboutMe";
 // import Portfolio from "./Portfolio/Portfolio";
 
-const Main = () => {
+function Main() {
   return (
     <>
       <Promo />
@@ -14,6 +14,6 @@ const Main = () => {
       <Portfolio /> */}
     </>
   );
-};
+}
 
 export default Main;
