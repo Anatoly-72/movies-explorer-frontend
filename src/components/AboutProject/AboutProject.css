@@ -2,7 +2,6 @@
   max-width: calc(100% - 140px);
   margin: 0 auto;
   padding: 119px 0 110px;
-  color: #000;
 }
 
 .about-project__title {
@@ -68,7 +67,6 @@
   justify-content: center;
   width: 80%;
   background: #f2f2f2;
-  color: #000;
 }
 
 .about-project__time-text {
