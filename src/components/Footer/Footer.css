@@ -60,6 +60,7 @@
 @media screen and (max-width: 767px) {
   .footer {
     max-width: calc(100% - 20px);
+    padding: 63px 0 0;
   }
 
   .footer__title {
@@ -77,7 +78,7 @@
   .footer__list {
     flex-direction: column;
     text-align: center;
-    gap: 12px;
+    gap: 5px;
     margin-bottom: 30px;
   }
 

@@ -1,5 +1,6 @@
 import "./SearchForm.css";
 import icon from "../../images/loop-icon.svg";
+import Checkbox from '../Checkbox/Checkbox';
 
 function SearchForm() {
   return (
@@ -18,6 +19,7 @@ function SearchForm() {
             <img className="search__icon" src={icon} alt="Поиск" />
           </button>
         </div>
+        <Checkbox />
       </form>
     </section>
   );

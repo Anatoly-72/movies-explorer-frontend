@@ -40,6 +40,11 @@
   color: #a0a0a0;
 }
 
+:focus::-webkit-input-placeholder {
+  color: transparent;
+  transition: .3s;
+}
+
 .search__button {
   border: none;
   cursor: pointer;
