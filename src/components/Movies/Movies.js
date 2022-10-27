@@ -3,10 +3,10 @@ import Header from "../Header/Header";
 import SearchForm from "../SearchForm/SearchForm";
 import Footer from "../Footer/Footer";
 
-function Movies() {
+function Movies({ loggedIn }) {
   return (
     <>
-      <Header />
+      <Header loggedIn={loggedIn} />
       <SearchForm />
       <Footer />
     </>
