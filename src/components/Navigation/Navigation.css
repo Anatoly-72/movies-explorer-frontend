@@ -40,7 +40,7 @@
 }
 
 .navigation__link_account::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
@@ -69,10 +69,32 @@
   cursor: pointer;
 }
 
+.navigation__btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  background-image: url(../../images/burger.svg);
+}
+
 .navigation__link:hover,
-.navigation__button:hover {
-  transition: .2s ease;
-  opacity: .5;
+.navigation__button:hover,
+.navigation__btn:hover {
+  transition: 0.2s ease;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 991px) {
+  .navigation__btn {
+    display: block;
+  }
+
+  .navigation_type_registered,
+  .navigation_type_account {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -87,5 +109,5 @@
   .navigation__button {
     font-size: 10px;
     padding: 5px 12px;
- }
+  }
 }

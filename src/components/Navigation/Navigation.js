@@ -27,6 +27,7 @@ function Navigation({ loggedIn }) {
               Аккаунт
             </Link>
           </nav>
+          <button className='navigation__btn' type='button' />
         </>
       ) : (
         <nav className="navigation">
@@ -42,16 +43,6 @@ function Navigation({ loggedIn }) {
       )}
     </>
   );
-  // return (
-  //    <div className='navigation'>
-  //       <Link to='/sign-up' className='navigation__link'>Регистрация</Link>
-  //       <Link to='/signin'>
-  //          <button className='navigation__button'>
-  //             Войти
-  //          </button>
-  //       </Link>
-  //    </div>
-  // )
 }
 
 export default Navigation;
