@@ -15,7 +15,7 @@ function NavTab() {
           </a>
         </li>
         <li className="navtab__item">
-          <a className="navtab__link" href="#student">
+          <a className="navtab__link" href="#about-me">
             Студент
           </a>
         </li>

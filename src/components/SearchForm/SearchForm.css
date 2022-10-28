@@ -1,7 +1,6 @@
 .search {
   position: relative;
   margin: 0 auto 10px;
-  max-width: calc(100% - 140px);
   padding: 60px 0 70px;
   border-bottom: 1px solid #e8e8e8;
 }
