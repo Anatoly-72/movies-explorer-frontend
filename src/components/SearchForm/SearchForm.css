@@ -59,3 +59,19 @@
 .search__button:hover {
   opacity: 0.5;
 }
+
+@media screen and (max-width: 991px) {
+  .search {
+    padding: 60px 0 51px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .search {
+    padding: 75px 0 51px;
+  }
+
+  .search__input::placeholder {
+    font-size: 11px;
+  }
+}

@@ -10,13 +10,6 @@ function MoviesCardList({ isMovies }) {
         <MoviesCard />
         <MoviesCard />
         <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
-        <MoviesCard />
       </div>
       <div className="cards__button-container">
         <button

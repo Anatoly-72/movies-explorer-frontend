@@ -45,3 +45,9 @@
     line-height: 18px;
     margin-left: 15px;
  }
+
+ @media screen and (max-width: 767px) {
+   .checkbox__label {
+      font-size: 11px;
+   }
+ }

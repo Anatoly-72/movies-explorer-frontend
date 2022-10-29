@@ -1,7 +1,20 @@
 import "./Navigation.css";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import PopupNavigation from "../PopupNavigation/PopupNavigation";
 
 function Navigation({ loggedIn }) {
+  const [isPopupNavigation, setIsPopupNavigation] = useState(false);
+
+
+  function closePopup() {
+    setIsPopupNavigation(false);
+  }
+
+  function openPopup() {
+    setIsPopupNavigation(true);
+  }
+
   return (
     <>
       {loggedIn ? (
@@ -23,11 +36,18 @@ function Navigation({ loggedIn }) {
             </NavLink>
           </nav>
           <nav className="navigation navigation_type_account">
-            <Link to="/profile" className="navigation__link navigation__link_account">
+            <Link
+              to="/profile"
+              className="navigation__link navigation__link_account"
+            >
               Аккаунт
             </Link>
           </nav>
-          <button className='navigation__btn' type='button' />
+          <button
+            className="navigation__btn"
+            type="button"
+            onClick={openPopup}
+          />
         </>
       ) : (
         <nav className="navigation">
@@ -41,6 +61,7 @@ function Navigation({ loggedIn }) {
           </Link>
         </nav>
       )}
+      <PopupNavigation isOpen={isPopupNavigation} onClose={closePopup} />
     </>
   );
 }
