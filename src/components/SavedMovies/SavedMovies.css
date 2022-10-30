@@ -1,18 +1,19 @@
-.movies {
+.saved-movies {
   width: 100%;
   max-width: calc(100% - 140px);
-  margin: 0 auto;
+  margin: 0 auto 247px;
   padding: 0;
 }
 
 @media screen and (max-width: 991px) {
-  .movies {
+  .saved-movies {
     max-width: calc(100% - 60px);
+    margin: 0 auto 170px;
   }
 }
 
 @media screen and (max-width: 767px) {
-    .movies {
-      max-width: calc(100% - 20px);
-    }
+  .saved-movies {
+    max-width: calc(100% - 20px);
   }
+}
