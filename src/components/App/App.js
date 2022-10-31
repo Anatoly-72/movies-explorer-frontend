@@ -5,6 +5,7 @@ import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
+import Register from '../Register/Register';
 
 function App() {
   // eslint-disable-next-line
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path='/profile'>
           <Profile loggedIn={loggedIn} />
+        </Route>
+        <Route path='/signup'>
+          <Register />
         </Route>
       </Switch>
     </div>

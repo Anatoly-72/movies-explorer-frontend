@@ -2,7 +2,7 @@ import './Profile.css';
 import Header from '../Header/Header';
 import { Link } from 'react-router-dom';
 
-const Profile = ({ loggedIn }) => {
+function Profile({ loggedIn }) {
   return (
     <>
       <Header loggedIn={loggedIn} />
