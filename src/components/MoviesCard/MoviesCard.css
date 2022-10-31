@@ -83,6 +83,11 @@
   .card__description-movie {
     padding: 14px;
   }
+
+  .card__button {
+    bottom: 35px;
+    right: 16px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -94,5 +99,10 @@
     font-size: 12px;
     line-height: 15px;
     margin-bottom: 14px;
+  }
+
+  .card__button {
+    bottom: 32px;
+    right: 10px;
   }
 }

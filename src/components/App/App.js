@@ -4,6 +4,7 @@ import { Switch, Route } from 'react-router-dom';
 import Main from '../Main/Main';
 import Movies from '../Movies/Movies';
 import SavedMovies from '../SavedMovies/SavedMovies';
+import Profile from '../Profile/Profile';
 
 function App() {
   // eslint-disable-next-line
@@ -20,6 +21,9 @@ function App() {
         </Route>
         <Route exact path='/saved-movies'>
           <SavedMovies loggedIn={loggedIn} />
+        </Route>
+        <Route path='/profile'>
+          <Profile loggedIn={loggedIn} />
         </Route>
       </Switch>
     </div>
