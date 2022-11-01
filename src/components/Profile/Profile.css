@@ -23,7 +23,7 @@
 .profile__field {
   display: flex;
   justify-content: space-between;
-  padding: 16px 0;
+  padding: 15px 0;
 }
 
 .profile__label {
@@ -31,6 +31,7 @@
   font-size: 11px;
   line-height: 13px;
   padding: 0 5px 0 0;
+  margin-top: 2px;
   white-space: nowrap;
 }
 
@@ -42,12 +43,14 @@
   width: 100%;
   outline: none;
   border: none;
-  background: transparent;
+  border-radius: 3px;
+  background: rgba(232, 232, 232, .5);
 }
 
 .profile__input:focus {
   outline: none;
-  border: 1px solid #e8e8e8
+  border: 1px solid #e8e8e8;
+  background-color: transparent;
 }
 
 .profile__line {
