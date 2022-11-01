@@ -29,7 +29,7 @@ function Portfolio() {
           <a
             className='portfolio__link'
             rel='noreferrer'
-            href='https://github.com/Anatoly-72/express-mesto-gha'
+            href='http://domainname.anatoly.nomorepartiesxyz.ru/sign-in'
             target='_blank'
           >
             Одностраничное приложение
