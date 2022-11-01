@@ -18,6 +18,7 @@ function Login() {
                 className='form__input'
                 name='name'
                 type='email'
+                placeholder='Введите почту'
                 required
               />
               <p className='form__error'>Что-то пошло не так...</p>
@@ -29,14 +30,17 @@ function Login() {
                 name='password'
                 type='password'
                 minLength='8'
+                placeholder='Введите пароль'
                 required
               />
               <p className='form__error'>Что-то пошло не так...</p>
             </label>
           </div>
+          <Link to='/movies'>
           <button className='form__button' type='submit'>
             Войти
           </button>
+          </Link>
         </form>
         <p className='form__text'>
           Ещё не зарегистрированы?
