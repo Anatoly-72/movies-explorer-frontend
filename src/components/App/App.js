@@ -7,6 +7,7 @@ import SavedMovies from '../SavedMovies/SavedMovies';
 import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
+import ErrorPage from '../ErrorPage/ErrorPage';
 
 function App() {
   // eslint-disable-next-line
@@ -32,6 +33,9 @@ function App() {
         </Route>
         <Route path='/signin'>
           <Login />
+        </Route>
+        <Route path='*'>
+          <ErrorPage />
         </Route>
       </Switch>
     </div>
