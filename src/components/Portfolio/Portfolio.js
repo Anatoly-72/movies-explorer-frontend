@@ -9,7 +9,7 @@ function Portfolio() {
           <a
             className='portfolio__link'
             rel='noreferrer'
-            href='https://github.com/Anatoly-72/how-to-learn'
+            href='https://anatoly-72.github.io/how-to-learn'
             target='_blank'
           >
             Статичный сайт
@@ -19,7 +19,7 @@ function Portfolio() {
           <a
             className='portfolio__link'
             rel='noreferrer'
-            href='https://github.com/Anatoly-72/russian-travel'
+            href='https://anatoly-72.github.io/russian-travel'
             target='_blank'
           >
             Адаптивный сайт

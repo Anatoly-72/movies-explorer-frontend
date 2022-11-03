@@ -76,7 +76,26 @@
   border: none;
   cursor: pointer;
   background-color: transparent;
-  background-image: url(../../images/burger.svg);
+  padding: 10px 8px;
+}
+
+.navigation__hamburger {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+.navigation__hamburger:before {
+  content: "";
+  position: absolute;
+  top: 7.5px;
+  left: 0px;
+  width: 100%;
+  border-top: 3px solid #000;
 }
 
 .navigation__link:hover,
@@ -112,8 +131,18 @@
   }
 
   .navigation__btn {
-    width: 30px;
+    width: 40px;
     height: 43px;
-    margin-right: 9px;
+    padding: 11px 8.5px;
+  }
+
+  .navigation__hamburger {
+    border-top: 2.5px solid #000;
+    border-bottom: 2.5px solid #000;
+  }
+
+  .navigation__hamburger:before {
+    border-top: 2.5px solid #000;
+    top: 7px;
   }
 }

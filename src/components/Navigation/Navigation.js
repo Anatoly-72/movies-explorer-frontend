@@ -47,7 +47,9 @@ function Navigation({ loggedIn }) {
             className='navigation__btn'
             type='button'
             onClick={openPopup}
-          />
+          >
+            <span class='navigation__hamburger'></span>
+          </button>
         </>
       ) : (
         <nav className='navigation'>
