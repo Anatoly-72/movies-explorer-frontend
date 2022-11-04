@@ -1,0 +1,148 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin: 0;
+}
+
+.navigation_type_registered {
+  margin-left: 63px;
+  gap: 16px;
+}
+
+.navigation_type_account {
+  justify-content: space-between;
+  width: 100px;
+  height: 30px;
+  position: relative;
+}
+
+.navigation__link {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  text-decoration: none;
+  color: #000;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.navigation__link_registered {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-shadow: none;
+}
+
+.navigation__link_account {
+  font-size: 14px;
+  text-shadow: none;
+}
+
+.navigation__link_account::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 26px;
+  height: 30px;
+  background-color: #f4f4f4;
+  border-radius: 4px;
+  background-image: url(../../images/account-icon.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.navigation__link_active {
+  font-weight: 500;
+}
+
+.navigation__button {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  border-radius: 3px;
+  border: none;
+  background: #3456f3;
+  color: #fff;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+
+.navigation__btn {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 10px 8px;
+}
+
+.navigation__hamburger {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  border-top: 3px solid #000;
+  border-bottom: 3px solid #000;
+}
+
+.navigation__hamburger:before {
+  content: "";
+  position: absolute;
+  top: 7.5px;
+  left: 0px;
+  width: 100%;
+  border-top: 3px solid #000;
+}
+
+.navigation__link:hover,
+.navigation__button:hover,
+.navigation__btn:hover {
+  transition: 0.2s ease;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 991px) {
+  .navigation__btn {
+    display: block;
+  }
+
+  .navigation_type_registered,
+  .navigation_type_account {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navigation {
+    gap: 14px;
+  }
+
+  .navigation__link {
+    font-size: 10px;
+  }
+
+  .navigation__button {
+    font-size: 10px;
+    padding: 5px 12px;
+  }
+
+  .navigation__btn {
+    width: 40px;
+    height: 43px;
+    padding: 11px 8.5px;
+  }
+
+  .navigation__hamburger {
+    border-top: 2.5px solid #000;
+    border-bottom: 2.5px solid #000;
+  }
+
+  .navigation__hamburger:before {
+    border-top: 2.5px solid #000;
+    top: 7px;
+  }
+}
