@@ -1,73 +1,72 @@
 .popup {
-    display: none;
-    position: fixed;
-    padding: 18px;
-    inset: 0;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, .5);
+  display: none;
+  position: fixed;
+  padding: 18px;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup_opened {
+  display: flex;
+}
+
+.popup__container {
+  width: 300px;
+  height: 120px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #a0a0a0;
+  margin: auto;
+}
+
+.popup__text {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.popup__close {
+  position: absolute;
+  top: -30px;
+  right: -18px;
+  width: 22px;
+  height: 22px;
+  outline: none;
+  border: none;
+  background: transparent url('../../images/close-icon-small.svg') center center /
+    cover no-repeat;
+  transition: 0.2s ease;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 540px) {
+  .popup {
+    padding: 3px;
   }
 
-  .popup_opened {
-    display: flex;
-  }
-
-  .popup__container {
-    width: 100%;
-    max-width: 300px;
-    min-height: 120px;
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-    background-color: #2be080;
-  }
+  /* .popup__container {
+    max-width: 235px;
+    max-height: 120px;
+  } */
 
   .popup__text {
-    margin: 0 auto;
-    padding: 0;
-    text-align: center;
-    color: #fff;
-    font-size: 24px;
-    font-weight: 500;
-    line-height: 32px;
+    max-width: 220px;
+    font-size: 18px;
   }
 
   .popup__close {
-    position: absolute;
-    top: -30px;
-    left: 290px;
-    width: 22px;
-    min-height: 22px;
-    outline: none;
-    border: none;
-    background: transparent url('../../images/icon-close-popup.svg') center center / cover no-repeat;
-    transition: opacity .2s linear;
+    right: 0;
   }
-
-  .popup__close:hover {
-    opacity: .6;
-    cursor: pointer;
-  }
-
-  @media all and (max-width: 540px) {
-    .popup {
-      padding: 3px;
-    }
-
-    .popup__container {
-      max-width: 235px;
-    }
-
-    .popup__text {
-      max-width: 220px;
-      font-size: 18px;
-    }
-
-    .popup__close {
-      top: -20px;
-      left: 235px;
-    }
-  }
+}

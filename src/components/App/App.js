@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import {
   Switch,
   Route,
-  useLocation,
+  // useLocation,
   useHistory,
   Redirect,
 } from 'react-router-dom';
@@ -23,7 +23,8 @@ import Profile from '../Profile/Profile';
 import Register from '../Register/Register';
 import Login from '../Login/Login';
 import ErrorPage from '../ErrorPage/ErrorPage';
-import Preloader from '../Preloader/Preloader';
+// import Preloader from '../Preloader/Preloader';
+import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
 import Popup from '../Popup/Popup';
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
 
   const [isOpenPopup, setIsOpenPopup] = useState(false);
   const [popupTitle, setPopupTitle] = useState('');
-  const { pathname } = useLocation();
+  // const { pathname } = useLocation();
   const history = useHistory();
 
   useEffect(() => {
@@ -108,7 +109,7 @@ function App() {
       document.addEventListener('keydown', handleEsc);
       return () => {
         document.removeEventListener('keydown', handleEsc);
-      }
+      };
     }
   }, [isOpenPopup]);
 
@@ -132,25 +133,51 @@ function App() {
           <Route exact path='/'>
             <Main />
           </Route>
-          <Route path='/movies'>
-            <Movies loggedIn={loggedIn} />
-          </Route>
-          <Route path='/saved-movies'>
-            <SavedMovies loggedIn={loggedIn} />
-          </Route>
-          <Route path='/profile'>
-            <Profile loggedIn={loggedIn} />
-          </Route>
-          <Route path='/signup'>
-            <Register onRegister={onRegister} />
-          </Route>
+          <ProtectedRoute
+            path='/movies'
+            loggedIn={loggedIn}
+            component={Movies}
+            isLoading={isLoading}
+            openPopup={openPopup}
+          />
+          <ProtectedRoute
+            path='/saved-movies'
+            loggedIn={loggedIn}
+            component={SavedMovies}
+            isLoading={isLoading}
+            openPopup={openPopup}
+          />
+          <ProtectedRoute
+            path='/profile'
+            loggedIn={loggedIn}
+            component={Profile}
+            isLoading={isLoading}
+            onSignOut={onSignOut}
+            openPopup={openPopup}
+          />
           <Route path='/signin'>
-            <Login />
+            {() =>
+              !loggedIn ? (
+                <Login onLogin={onLogin} />
+              ) : (
+                <Redirect to='/movies' />
+              )
+            }
+          </Route>
+          <Route path="/signup">
+            {() =>
+              !loggedIn ? (
+                <Register onRegister={onRegister} />
+              ) : (
+                <Redirect to="/movies" />
+              )
+            }
           </Route>
           <Route path='*'>
             <ErrorPage />
           </Route>
         </Switch>
+        <Popup text={popupTitle} isOpen={isOpenPopup} onClose={closePopup} />
       </div>
     </CurrentUserContext.Provider>
   );

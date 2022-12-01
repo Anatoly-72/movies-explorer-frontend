@@ -40,7 +40,7 @@
 }
 
 .navigation__link_account::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -77,6 +77,7 @@
   cursor: pointer;
   background-color: transparent;
   padding: 10px 8px;
+  /* border: 1px solid red; */
 }
 
 .navigation__hamburger {
@@ -90,7 +91,7 @@
 }
 
 .navigation__hamburger:before {
-  content: "";
+  content: '';
   position: absolute;
   top: 7.5px;
   left: 0px;
@@ -143,6 +144,6 @@
 
   .navigation__hamburger:before {
     border-top: 2.5px solid #000;
-    top: 7px;
+    top: 6.8px;
   }
 }

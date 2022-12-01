@@ -6,5 +6,5 @@ export const messageErrorMovies = 'Во время запроса произош
 export const serverError = 'Что-то пошло не так! Ошибка сервера';
 export const validationEmailErrorMessage = 'Некорректый адрес почты';
 export const registerUserSuccessful = 'Вы успешно зарегистрировались!';
-export const registerUserError = 'Что-то пошло не так! Ошибка регистрации';
+export const registerUserError = 'Передан уже зарегистрированный email';
 export const authError = 'Что-то пошло не так! Ошибка авторизации';

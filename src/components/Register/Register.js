@@ -43,7 +43,6 @@ function Register({ onRegister }) {
                 type='text'
                 minLength='2'
                 maxLength='30'
-                autoComplete='name'
                 placeholder='Введите имя'
                 value={inputValues.name || ''}
                 onChange={handleInputChange}
@@ -62,7 +61,6 @@ function Register({ onRegister }) {
                 }`}
                 name='email'
                 type='email'
-                autoComplete='email'
                 placeholder='Введите почту'
                 value={inputValues.email || ''}
                 onChange={handleInputChange}
@@ -103,7 +101,6 @@ function Register({ onRegister }) {
           <button
             className={`form__button ${isValid ? '' : 'form__button_disabled'}`}
             type='submit'
-            disabled={!isValid ? true : ''}
           >
             Зарегистрироваться
           </button>

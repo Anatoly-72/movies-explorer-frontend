@@ -48,7 +48,7 @@ function Navigation({ loggedIn }) {
             type='button'
             onClick={openPopup}
           >
-            <span class='navigation__hamburger'></span>
+            <div className='navigation__hamburger'></div>
           </button>
         </>
       ) : (
